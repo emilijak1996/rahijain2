@@ -26,22 +26,8 @@ keywords = list(keywords_df)
 print("data read from input.xls")
 
 proxies = [
-	 {},
-	# {
-	# 	"http": "http://210.212.253.226:8080"	
-	# },
-	# {
-	# 	"http": "http://210.212.253.227:8080"
-	# },
-	{
-      "https": "https://103.227.37.45:6060"
-    },
-	{
-      "https": "https://51.158.165.18:8811"
-    },
-	{
-      "https": "https://5.53.124.101:8888"
-    }
+	 {}
+	
 ]
 
 HEADERS = {

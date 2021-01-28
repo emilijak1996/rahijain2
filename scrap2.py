@@ -13,7 +13,7 @@ OUTPUT_DIR	= 'output'
 results = []
 cities = []
 keywords = []
-TOT=2
+TOT=150
 tot=0
 
 file_location="input.xls"
@@ -26,7 +26,7 @@ keywords = list(keywords_df)
 print("data read from input.xls")
 
 proxies = [
-	# {},
+	 {},
 	# {
 	# 	"http": "http://210.212.253.226:8080"	
 	# },
@@ -65,6 +65,7 @@ proxy_index = 0
 try:
 	for keyword in keywords :
 		for city in cities :
+			time.sleep(5)
 			if tot==TOT:
 				break
 			tot+=1
@@ -108,6 +109,7 @@ try:
 			try:
 				print(f"[city:{city}] [{keyword}] {total_page} pages")
 				for page in range(1,total_page +1) :
+					time.sleep(3)
 					print(keyword," and ",city, " --",page," page loading...")
 					page_link=link + "/page-" +str(page)
 					success = False

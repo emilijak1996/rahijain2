@@ -13,7 +13,7 @@ OUTPUT_DIR	= 'output'
 results = []
 cities = []
 keywords = []
-TOT=150
+TOT=250
 tot=0
 
 file_location="input.xls"
@@ -51,7 +51,7 @@ proxy_index = 0
 try:
 	for keyword in keywords :
 		for city in cities :
-			time.sleep(5)
+			time.sleep(10)
 			if tot==TOT:
 				break
 			tot+=1
@@ -95,7 +95,7 @@ try:
 			try:
 				print(f"[city:{city}] [{keyword}] {total_page} pages")
 				for page in range(1,total_page +1) :
-					time.sleep(3)
+					time.sleep(1)
 					print(keyword," and ",city, " --",page," page loading...")
 					page_link=link + "/page-" +str(page)
 					success = False

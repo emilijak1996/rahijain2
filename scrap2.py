@@ -55,7 +55,7 @@ try:
 			if tot==TOT:
 				break
 			tot+=1
-			url="https://www.justdial.com/india" + city + "/" + keyword
+			url="https://www.justdial.com/" + city + "/" + keyword
 			success = False
 			proxies_tried = list()
 			while not success:

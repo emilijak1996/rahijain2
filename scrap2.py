@@ -13,7 +13,7 @@ OUTPUT_DIR	= 'output'
 results = []
 cities = []
 keywords = []
-TOT=200
+TOT=75
 tot=0
 
 file_location="input.xls"
@@ -55,7 +55,7 @@ try:
 			if tot==TOT:
 				break
 			tot+=1
-			url="https://www.justdial.com/india" + city + "/" + keyword
+			url="https://www.justdial.com/" + city + "/" + keyword
 			success = False
 			proxies_tried = list()
 			while not success:

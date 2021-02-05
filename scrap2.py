@@ -13,7 +13,7 @@ OUTPUT_DIR	= 'output'
 results = []
 cities = []
 keywords = []
-TOT=400
+TOT=165
 tot=0
 
 file_location="input.xls"

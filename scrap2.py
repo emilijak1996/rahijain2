@@ -13,7 +13,7 @@ OUTPUT_DIR	= 'output'
 results = []
 cities = []
 keywords = []
-TOT=165
+TOT=100
 tot=0
 
 file_location="input.xls"
@@ -55,7 +55,7 @@ try:
 			if tot==TOT:
 				break
 			tot+=1
-			url="https://www.justdial.com/" + city + "/" + keyword
+			url="http://api.scraperapi.com?api_key=86f9a8cb23bb945fca77c0694c32d65f&url=https://www.justdial.com/" + city + "/" + keyword
 			success = False
 			proxies_tried = list()
 			while not success:
@@ -95,9 +95,8 @@ try:
 			try:
 				print(f"[city:{city}] [{keyword}] {total_page} pages")
 				for page in range(1,total_page +1) :
-					time.sleep(1)
 					print(keyword," and ",city, " --",page," page loading...")
-					page_link=link + "/page-" +str(page)
+					page_link="http://api.scraperapi.com?api_key=86f9a8cb23bb945fca77c0694c32d65f&url="+link + "/page-" +str(page)
 					success = False
 					proxies_tried = list()
 					while not success:

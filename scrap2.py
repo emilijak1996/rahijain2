@@ -34,7 +34,7 @@ HEADERS = {
 	'Content-Type': 'application/json',
 	'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:84.0) Gecko/20100101 Firefox/84.0',
 	'Origin': 'https://www.justdial.com',
-	'Host': 'www.justdial.com',
+	'Host': 'www.justdial.com/',
 	'x-cms': 'v2',
 	'x-content': 'desktop',
 	'x-mp': 'justdial',
@@ -55,7 +55,7 @@ try:
 			if tot==TOT:
 				break
 			tot+=1
-			url="https://www.justdial.com/india" + city + "/" + keyword
+			url="https://www.justdial.com/" + city + "/" + keyword
 			success = False
 			proxies_tried = list()
 			while not success:
@@ -96,7 +96,7 @@ try:
 				print(f"[city:{city}] [{keyword}] {total_page} pages")
 				for page in range(1,total_page +1) :
 					print(keyword," and ",city, " --",page," page loading...")
-					time.sleep(1)
+					
 					page_link=link + "/page-" +str(page)
 					success = False
 					proxies_tried = list()
